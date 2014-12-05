@@ -1,0 +1,10 @@
+Package: better-served-printer
+Version: 0.0.2
+Architecture: all
+Essential: no
+Section: web
+Priority: optional
+Depends: ruby1.9.1 (>=1.9.1)
+Maintainer: Christoph Klocker
+Installed-Size: 196
+Description: Better Served Printer client

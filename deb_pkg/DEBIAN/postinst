@@ -1,0 +1,10 @@
+#!/bin/sh
+update-rc.d -f better_served_printer defaults
+/etc/init.d/better_served_printer start
+echo
+echo
+echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+echo
+echo Please update your account keys in
+echo
+echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

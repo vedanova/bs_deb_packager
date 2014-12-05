@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ "$1" = "remove" ]; then
+  /etc/init.d/better_served_printer stop
+  update-rc.d -f better_served_printer remove
+  gem uninstall better_served_printer
+fi
+

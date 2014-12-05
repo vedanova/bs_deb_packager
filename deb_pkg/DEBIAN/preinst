@@ -1,0 +1,6 @@
+#!/bin/sh
+git clone https://github.com/vedanova/better_served_printer.git /tmp/better_served_printer
+cd /tmp/better_served_printer && gem build /tmp/better_served_printer/better_served_printer.gemspec
+cd /tmp/better_served_printer && gem install better_served_printer-0.0.2.gem --no-ri --no-rdoc
+cd /tmp
+rm -rf /tmp/better_served_printer
