@@ -1,3 +1,14 @@
 #!/bin/sh
 update-rc.d -f bsprinter defaults
-/etc/init.d/bsprinter restart
+if grep -Fxq "API_KEY" /etc/better_served_printer/better_server_printer.yml
+then
+    echo "################################"
+    echo "YOU NEED TO SET YOUR API KEYS BEFORE YOU CAN START THE SERVICE"
+    echo
+    echo "Please update /etc/better_served_printer/better_server_printer.yml"
+    echo "and then run"
+    echo "/etc/init.d/bsprinter start"
+    echo "################################"
+else
+    /etc/init.d/bsprinter restart
+fi
