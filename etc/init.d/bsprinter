@@ -1,13 +1,13 @@
 #! /bin/sh
 ### BEGIN INIT INFO
-# Provides:          better_served_printer
+# Provides:          bsprinter
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Example initscript
-# Description:       This file should be used to construct scripts to be
-#                    placed in /etc/init.d.
+# Short-Description: BetterServed printer client
+# Description:       Connects to the BetterServed SAAS service and receives and prints incoming messages
+#
 ### END INIT INFO
 
 # Author: Christoph Klocker <christoph@vedanova.com>
@@ -17,7 +17,7 @@
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 DESC="Connects to the BetterServed service"
-NAME=better_served_printer
+NAME=bsprinter
 DAEMON=/usr/local/bin/$NAME
 DAEMON_ARGS=""
 PIDFILE=/var/run/$NAME.pid
