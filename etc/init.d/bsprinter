@@ -42,7 +42,7 @@ SCRIPTNAME=/etc/init.d/$NAME
 #
 do_start()
 {
-	DEAMON start
+	$NAME start
 }
 
 #
@@ -50,20 +50,20 @@ do_start()
 #
 do_stop()
 {
-	DEAMON stop
+	$NAME stop
 }
 
 #
 # Function that sends a SIGHUP to the daemon/service
 #
 do_reload() {
-	DEAMON reload
+	$NAME reload
 }
 #
 # Restart
 #
 do_restart() {
-    DEAMON restart
+    $NAME restart
 }
 
 case "$1" in
@@ -84,7 +84,7 @@ case "$1" in
 	esac
 	;;
   status)
-	DEAMON status
+	$NAME status
 	;;
   #reload|force-reload)
 	#
